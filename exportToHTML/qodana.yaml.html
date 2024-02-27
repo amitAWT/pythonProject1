@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>qodana.yaml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #5f826b; font-style: italic;}
+.s1 { color: #bcbec4;}
+.s2 { color: #cf8e6d;}
+.s3 { color: #bcbec4;}
+.s4 { color: #6aab73;}
+.s5 { color: #bcbec4;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+qodana.yaml</font>
+</center></td></tr></table>
+<pre><span class="s0">#-------------------------------------------------------------------------------#</span>
+<span class="s0">#               Qodana analysis is configured by qodana.yaml file               #</span>
+<span class="s0">#             https://www.jetbrains.com/help/qodana/qodana-yaml.html            #</span>
+<span class="s0">#-------------------------------------------------------------------------------#</span>
+<span class="s2">version</span><span class="s3">: </span><span class="s4">&quot;1.0&quot;</span>
+
+<span class="s0">#Specify inspection profile for code analysis</span>
+<span class="s2">profile</span><span class="s3">:</span>
+  <span class="s2">name</span><span class="s3">: </span><span class="s5">qodana.starter</span>
+
+<span class="s0">#Enable inspections</span>
+<span class="s0">#include:</span>
+<span class="s0">#  - name: &lt;SomeEnabledInspectionId&gt;</span>
+
+<span class="s0">#Disable inspections</span>
+<span class="s0">#exclude:</span>
+<span class="s0">#  - name: &lt;SomeDisabledInspectionId&gt;</span>
+<span class="s0">#    paths:</span>
+<span class="s0">#      - &lt;path/where/not/run/inspection&gt;</span>
+
+<span class="s0">#Execute shell command before Qodana execution (Applied in CI/CD pipeline)</span>
+<span class="s0">#bootstrap: sh ./prepare-qodana.sh</span>
+
+<span class="s0">#Install IDE plugins before Qodana execution (Applied in CI/CD pipeline)</span>
+<span class="s0">#plugins:</span>
+<span class="s0">#  - id: &lt;plugin.id&gt; #(plugin id can be found at https://plugins.jetbrains.com)</span>
+
+<span class="s0">#Specify Qodana linter for analysis (Applied in CI/CD pipeline)</span>
+<span class="s2">linter</span><span class="s3">: </span><span class="s5">jetbrains/qodana-&lt;linter&gt;:latest</span>
+</pre>
+</body>
+</html>
