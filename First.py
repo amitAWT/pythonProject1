@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import Select
 import time
 
-Serv_obj= Service("C:\\Users\\dell\\Downloads\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe")
+Serv_obj= Service("C:\\Drivers\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe")
 driver=webdriver.Chrome(service=Serv_obj)
 
 driver.get("https://dev.sqor.ai")

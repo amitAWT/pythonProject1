@@ -7,10 +7,18 @@ from PageObjects.Signup import signup
 
 class Test_002_signup:
     baseurl = "https://dev.sqor.ai"
-    emailid = "pepc@kreatifeo.com"
+    emailid = "surogato@gifts4homes.com"
     code = "1234"
+    flname = "Anuj R"
+    password = "Amit@123!!"
+    confirmpass = "Amit@123!!"
+    companyname = "Testing"
 
-    def test_login(self, setup):
+    if password == confirmpass:
+        print("Password matched")
+    else:
+        print("Please enter valid Confirm Password")
+    def test_signup (self, setup):
         self.driver = setup
         self.driver.get(self.baseurl)
         self.driver.maximize_window()
@@ -22,3 +30,11 @@ class Test_002_signup:
         self.sp.clicksignupbttn()
         time.sleep(30)
         self.sp.clickvalidatebttn()
+        time.sleep(5)
+        self.sp.setfirstlastname(self.flname)
+        self.sp.setpassword(self.password)
+        self.sp.setconfirmpass(self.confirmpass)
+        self.sp.clicksignuptwo()
+        time.sleep(5)
+
+
